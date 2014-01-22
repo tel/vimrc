@@ -10,7 +10,12 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
 
-colorscheme peaksea
+if has("gui_running")
+    try
+        colorscheme peaksea
+    catch
+    endtry
+endif
 
 " Set font according to system
 if has("mac") || has("macunix")
